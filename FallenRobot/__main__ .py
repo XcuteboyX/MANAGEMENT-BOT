@@ -27,8 +27,8 @@ from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 from telethon import __version__ as tlhver
 
-import MukeshRobot.modules.sql.users_sql as sql
-from MukeshRobot import (
+import FallenRobot.modules.sql.users_sql as sql
+from FallenRobot import (
     BOT_NAME,
     BOT_USERNAME,
     LOGGER,
@@ -122,7 +122,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("MukeshRobot.modules." + module_name)
+    imported_module = importlib.import_module("FallenRobot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
